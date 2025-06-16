@@ -4,7 +4,7 @@ This is the frontend implementation of the **Audiophile E-commerce** platform. I
 The github repo for the bckend rest api is https://github.com/oys2021/audiophiles-backend.git
 ## 🌐 Live Demo
 
-> 🚀 [View Site on Vercel](https://audiophiles-five.vercel.app/)  
+> 🚀 [View Site on Vercel](https://audiophile-sooty-iota.vercel.app/)  
 
 ---
 

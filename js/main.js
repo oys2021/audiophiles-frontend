@@ -25,7 +25,7 @@ if (document.getElementById('speaker-list')) {
                             ${isNew}
                             <h2 class="product-name">${product.name}</h2>
                             <p class="product-description">${product.description}</p>
-                            <a href="product.html?id=${product.id}" class="btn btn-primary">SEE PRODUCT</a>
+                             <a href="product-details.html?slug=${product.slug}" class="btn btn-primary">SEE PRODUCT</a>
                         </div>
                     </div>
                 `;
@@ -61,13 +61,13 @@ if (document.getElementById('earphone-list')) {
                 const productHTML = `
                     <div class="product-showcase ${index % 2 !== 0 ? 'reverse' : ''}">
                         <div class="product-image">
-                            <img src="${product.image.url}" alt="${product.name}">
+                            <img src="${product.image_absolute_url}" alt="${product.name}">
                         </div>
                         <div class="product-info">
                             ${isNew}
                             <h2 class="product-name">${product.name}</h2>
                             <p class="product-description">${product.description}</p>
-                            <a href="product.html?id=${product.id}" class="btn btn-primary">SEE PRODUCT</a>
+                            <a href="product-details.html?slug=${product.slug}" class="btn btn-primary">SEE PRODUCT</a>
                         </div>
                     </div>
                 `;
@@ -110,7 +110,8 @@ if (document.getElementById('headphone-list')) {
                             ${isNew}
                             <h2 class="product-name">${product.name}</h2>
                             <p class="product-description">${product.description}</p>
-                            <a href="product.html?id=${product.id}" class="btn btn-primary">SEE PRODUCT</a>
+                             <a href="product-details.html?slug=${product.slug}" class="btn btn-primary">SEE PRODUCT</a>
+                            
                         </div>
                     </div>
                 `;
@@ -123,3 +124,8 @@ if (document.getElementById('headphone-list')) {
             productContainer.innerHTML = "<p>Error loading products. Try again later.</p>";
         });
 }
+
+
+
+
+

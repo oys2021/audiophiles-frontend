@@ -8,6 +8,143 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <style>
+    
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+  position: relative;
+}
+
+/* Cart Link and Button Styling */
+.cart-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.cart-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.cart-btn:hover {
+  opacity: 0.7;
+}
+
+.cart-btn svg {
+  display: block;
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #d87d4a;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(10%, -10%); 
+}
+
+
+/* Mobile Header Layout */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 24px 0;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+    order: 1;
+    margin-right: auto;
+  }
+  
+  .logo {
+    order: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .cart-link {
+    order: 3;
+    margin-left: auto;
+  }
+  
+  .cart-btn {
+    padding: 12px;
+  }
+  
+  .cart-count {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    transform: translate(20%, -20%);
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 20px 0;
+  }
+  
+  .cart-btn {
+    padding: 10px;
+  }
+  
+   .cart-count {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    transform: translate(15%, -15%);
+  }
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+  
+  .logo {
+    order: 1;
+  }
+  
+  .nav {
+    order: 2;
+  }
+  
+  .cart-link {
+    order: 3;
+  }
+}
+    </style>
 </head>
 <body>
 
@@ -34,12 +171,14 @@
                     </ul>
                 </nav>
                 
+                <a href="cart.html" class="cart-link">
                 <button class="cart-btn" id="cartBtn">
                     <svg width="23" height="20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.625 15.833c1.132 0 2.054.935 2.054 2.084 0 1.148-.922 2.083-2.054 2.083-1.132 0-2.054-.935-2.054-2.083 0-1.15.922-2.084 2.054-2.084zm9.857 0c1.132 0 2.054.935 2.054 2.084 0 1.148-.922 2.083-2.054 2.083-1.132 0-2.053-.935-2.053-2.083 0-1.15.92-2.084 2.053-2.084zm-9.857 1.39a.69.69 0 00-.685.694.69.69 0 00.685.694.69.69 0 00.685-.694.69.69 0 00-.685-.694zm9.857 0a.69.69 0 00-.684.694.69.69 0 00.684.694.69.69 0 00.685-.694.69.69 0 00-.685-.694zM4.717 0c.316 0 .59.215.658.517l.481 2.122h16.47a.68.68 0 01.538.262c.127.166.168.38.11.579l-2.695 9.236a.672.672 0 01-.648.478H7.41a.667.667 0 00-.673.66c0 .364.303.66.674.66h12.219c.372 0 .674.295.674.66 0 .364-.302.66-.674.66H7.412c-1.115 0-2.021-.889-2.021-1.98 0-.812.502-1.511 1.218-1.816L4.176 1.32H.674A.667.667 0 010 .66C0 .296.302 0 .674 0zm16.716 3.958H6.156l1.797 7.917h11.17l2.31-7.917z" fill="#FFF" fill-rule="nonzero"/>
                     </svg>
-                    <span class="cart-count" id="cartCount">0</span>
+                    <span class="cart-count" id="cart-count">0</span>
                 </button>
+                </a>
             </div>
         </div>
     </header>
@@ -110,7 +249,7 @@
                     <div class="featured-text">
                         <h2>ZX9 SPEAKER</h2>
                         <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                        <a href="" class="btn btn-secondary">SEE PRODUCT</a>
+                        <a href="product-details.html?slug=zx9-speaker" class="btn btn-secondary">SEE PRODUCT</a>
                     </div>
                 </div>
             </div>
@@ -120,7 +259,7 @@
                 <div class="featured-content">
                     <div class="featured-text">
                         <h2>ZX7 SPEAKER</h2>
-                        <a href="" class="btn btn-outline">SEE PRODUCT</a>
+                        <a href="product-details.html?slug=zx7-speaker" class="btn btn-outline">SEE PRODUCT</a>
                     </div>
                     <div class="featured-image">
                         <img src="assets\home\desktop\image-speaker-zx7.jpg" alt="ZX7 Speaker">
@@ -136,7 +275,7 @@
                     </div>
                     <div class="featured-text">
                         <h2>YX1 EARPHONES</h2>
-                        <a href="" class="btn btn-outline">SEE PRODUCT</a>
+                        <a href="product-details.html?slug=yx1-earphones" class="btn btn-outline">SEE PRODUCT</a>
                     </div>
                 </div>
             </div>
@@ -206,6 +345,8 @@
         </div>
     </footer>
 
+     <script src="js/main.js"></script>
+
     <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -225,5 +366,15 @@
             });
         });
     </script>
+
+    <script>
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    document.getElementById('cart-count').textContent = count;
+  }
+
+  document.addEventListener('DOMContentLoaded', updateCartCount);
+</script>
 </body>
 </html>
